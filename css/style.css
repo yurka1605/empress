@@ -1,0 +1,360 @@
+@import '../fonts/GothamPro/stylesheet.css';
+
+@font-face {
+	font-family: 'Copperplate';
+	src: url('../fonts/Copperplate.ttf');
+	src: url('../fonts/Copperplate.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotham Pro';
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #000000;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.bg {
+    background-image: url(../img/bg.png);
+    background-size: cover;
+}
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    background-color: #000000;
+    z-index: 10;
+}
+.header__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.header__contacts,
+.header__place {
+    display: flex;
+    align-items: center;
+}
+.header__contacts img,
+.header__place img {
+    margin-right: 20px;
+}
+.header__contacts span,
+.header__contacts span a,
+.header__place span {
+    color: #969696;
+}
+.header__nav {
+    padding: 25px 0;
+}
+.header__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__list_item a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* END:header */
+
+/* banner */
+.banner {
+    margin-top: 150px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner img {
+    max-width: 523px;
+}
+.banner__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255, 214, 143, 255);
+    padding-bottom: 24px;
+}
+.title:after {
+    content: '';
+    position: relative;
+    display: block;
+    background-color: rgba(255, 214, 143, 255);
+    width: 50px;
+    height: 1px;
+    margin-left: 10px;
+}
+.main-title {
+    font-family: 'Copperplate';
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.banner__info p {
+    padding-top: 29px;
+    line-height: 1.8;
+}
+/* END:banner */
+
+/* uslugi */
+.uslugi .main-title {
+    text-align: center;
+}
+.uslugi__list {
+    width: 730px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 0 100px 0;
+}
+.usluga {
+    border-bottom: 1px solid #efc986;
+    transition: all .3s linear;
+    overflow: hidden;
+}
+.usluga.active .usluga__head img {
+    transform: rotate(180deg);
+}
+.usluga__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 15px 0;
+}
+.usluga__head img {
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.usluga__prices {
+    padding-top: 15px;
+}
+.usluga__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+.usluga__value {
+    color: rgba(255, 214, 143, 255);
+}
+/* END:uslugi */
+
+/* gallery */
+.gallery .main-title {
+    text-align: center;
+}
+.gallery__photos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0 90px 0;
+}
+.photos__main {
+    width: 50%;
+    height: auto;
+}
+.photos__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 12px;
+    height: 100%;
+}
+.photos__item {
+    width: calc((100% - 12px) / 2);
+    /* padding-bottom: 12px; */
+}
+.photos__item:nth-child(1),
+.photos__item:nth-child(2) {
+    padding-bottom: 12px;
+}
+.photos__item img {
+    width: 100%;
+    height: auto;
+}
+/* END:gallery */
+
+/* lazer */
+.lazer__text {
+    background-image: url(../img/gallery-bg.png);
+    background-size: auto;
+    font-family: 'Copperplate';
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    line-height: 1.8;
+    padding: 40px 13%;
+    text-align: center;
+}
+.lazer__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0 60px 0;
+}
+.lazer__img {
+    max-width: 520px;
+}
+.lazer__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.lazer__plus h3,
+.lazer__desc h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.lazer__desc p {
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.luzer__plus_item {
+    padding-top: 20px;
+}
+.luzer__plus_item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.luzer__plus_item p {
+    line-height: 1.8;
+}
+/* END:lazer */
+
+/* procedura */
+.procedura {
+    padding: 70px 0;
+}
+.procedura .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.procedure__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+}
+.procedure__img {
+    max-width: 520px;
+}
+.procedure__info p {
+    padding-top: 15px;
+    line-height: 1.8;
+    max-width: 450px;
+}
+.procedure__list {
+    padding-left: 15px;
+    list-style-type: disc;
+}
+.procedure__item {
+    padding-top: 15px;
+    padding-left: 5px;
+    line-height: 1.8;
+}
+::marker {
+    color: #efc986;
+}
+.resume p {
+    padding-top: 15px;
+    line-height: 1.8;
+}
+/* END:procedura */
+
+/* masters */
+.masters {
+    padding: 140px 0 120px 0;
+}
+.masters .main-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.masters .main-title::before {
+    content: "";
+    display: block;
+    width: 41px;
+    height: 1px;
+    background-color: #efc986;
+    margin-right: 5px;
+}
+.masters__slider {
+    max-width: 75%;
+    margin: 0 auto;
+}
+.master__slide {
+    padding: 0 20px;
+}
+.master__photo {
+    width: 100%;
+}
+.master__name {
+    padding: 20px 0 13px 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+.master__about {
+    font-size: 12px;
+    line-height: 1.8;
+}
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-130%, -215%);
+    background: url(../img/slider-arrow.png);
+    width: 19px;
+    height: 34px;
+    font-size: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.slick-next {
+    left: auto;
+    right: 0;
+    transform: translate(130%, -215%) rotate(180deg);
+}
+/* END:masters */
