@@ -10,7 +10,6 @@ $(document).ready(function () {
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 infinite: true,
-                dots: true
               }
             },
             {
@@ -36,6 +35,16 @@ $(document).ready(function () {
             current === $(el).data('num') ? $(el).addClass('active') : $(el).removeClass('active');
         });
         acardeonChange();
+    });
+
+    $('.header__btn').on('click', function () {
+      $('.mobile-menu').addClass('active');
+      $('body').css('overflow-y', 'hidden');
+    });
+
+    $('.mobile__menu img').on('click', function () {
+      $('.mobile-menu').removeClass('active');
+      $('body').css('overflow-y', 'auto');
     });
 });
 
