@@ -37,7 +37,7 @@ ul {
 
 .bg {
     background-image: url(../img/bg.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 /* header */
@@ -115,6 +115,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     padding-left: 50px;
+    width: 50%;
 }
 .title {
     position: relative;
@@ -209,6 +210,7 @@ ul {
     flex-wrap: wrap;
     padding-left: 12px;
     height: 100%;
+    width: 50%;
 }
 .photos__item {
     width: calc((100% - 12px) / 2);
@@ -251,6 +253,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     padding-left: 50px;
+    width: 50%;
 }
 .lazer__plus h3,
 .lazer__desc h3 {
@@ -289,6 +292,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     padding-right: 50px;
+    width: 50%;
 }
 .procedure__img {
     max-width: 520px;
@@ -622,6 +626,18 @@ footer .menu a {
 }
 
 @media (max-width: 992px) {
+    .bg {
+        background-repeat: no-repeat;
+        background-image: cover;
+    }
+    .procedure__info,
+    .procedure__img,
+    .lazer__img,
+    .lazer__desc,
+    .photos__list,
+    .banner__info {
+        width: 100%;
+    }
     .header__info {
         padding: 15px 0;
     }
